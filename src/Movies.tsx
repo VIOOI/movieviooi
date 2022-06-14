@@ -42,7 +42,7 @@ export const MoviesPage: React.FC = () => {
 						<div
 							className="flex items-center gap-0 cursor-pointer"
 							onClick={() => {
-								navigate('/')
+								navigate(-1)
 							}}
 							>
 							<svg xmlns="http://www.w3.org/2000/svg" width="31.11" height="20.001" viewBox="0 0 31.11 20.001">

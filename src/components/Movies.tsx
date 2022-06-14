@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import { IMoviesProps } from '../interfaces'
 
-export const Movies: React.FC<IMoviesProps> = ({ poster, title, year, type, imdbID }) => {
+export const Movies = motion(React.forwardRef(({ poster, title, year, type, imdbID }: IMoviesProps, ref: any) => {
 	return (
-		<div className="relative">
+		<div className="relative" ref={ref}>
 		<Link to={imdbID}>
 			<div 
 				className="aspect-w-2 aspect-h-3 w-full bg-gray-200 rounded-xl bg-center bg-cover bg"
@@ -22,4 +23,4 @@ export const Movies: React.FC<IMoviesProps> = ({ poster, title, year, type, imdb
 		</div>
 	)
 
-}
+}))
